@@ -11,14 +11,14 @@ class CreatePacientesTable extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up() //Creamos una tabla que tiene una serie de campos
     {
-        Schema::create('pacientes', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('pacientes', function (Blueprint $table) { //describimos los atributos de la tabla
+            $table->increments('id'); //se crea un identificador incremental, se actuaizan los registros
             $table->string('name');
             $table->string('surname');
             $table->string('nuhsa');
-            $table->timestamps();
+            $table->timestamps(); //cuando he insertado o borrado algo en la tabla
         });
     }
 
@@ -27,7 +27,7 @@ class CreatePacientesTable extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down() //Cuando quiero deshacer la migracion quiero eliminar la tabla
     {
         Schema::drop('pacientes');
     }

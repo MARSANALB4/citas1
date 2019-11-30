@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                     CGIS: Citas Pacientes CON CAMBIO
+                     Bienvenido al gestor de citas
                 </div>
 
                 <div class="links">
