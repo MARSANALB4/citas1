@@ -58,11 +58,16 @@ class CitaController extends Controller
             'fecha_hora' => 'required|date|after:now',
             'localizacion' => 'required|max:255'
 
+
+
         ]);
 
         $cita = new Cita($request->all());
+        $diff15M= new \DateInterval("PT15M");
+      //  dd($cita->fecha_hora);
+        $fecha_inicio = \DateTime::createFromFormat('Y-m-d\TH:i',$cita->fecha_hora);
+        $cita->fechafinal = $fecha_inicio->add($diff15M);
         $cita->save();
-
 
         flash('Cita creada correctamente');
 

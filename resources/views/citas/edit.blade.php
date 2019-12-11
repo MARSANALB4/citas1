@@ -21,6 +21,7 @@
 
                         </div>
 
+
                         <div class="form-group">
                             {!!Form::label('medico_id', 'Medico') !!}
                             <br>
@@ -36,6 +37,9 @@
                             <br>
                             {!! Form::text('localizacion', $cita->localizacion, ['class' => 'form-control']) !!}
                         </div>
+
+
+
                         {!! Form::submit('Guardar',['class'=>'btn-primary btn']) !!}
 
                         {!! Form::close() !!}
