@@ -19,6 +19,7 @@ class CreatePacientesTable extends Migration
             $table->string('surname');
             $table->string('nuhsa');
             $table->timestamps(); //cuando he insertado o borrado algo en la tabla
+
         });
     }
 
