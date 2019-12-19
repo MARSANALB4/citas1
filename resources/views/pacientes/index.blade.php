@@ -31,7 +31,7 @@
                                     <td>{{ $paciente->name }}</td>
                                     <td>{{ $paciente->surname }}</td>
                                     <td>{{ $paciente->nuhsa }}</td>
-                                    <td>{{ $paciente->enfermedad->nombre_enfermedad }}</td>
+                                    <td>{{ $paciente->enfermedad->nombre_enfermedad}}</td>
                                     <td>
                                         {!! Form::open(['route' => ['pacientes.edit',$paciente->id], 'method' => 'get']) !!}
                                         {!!   Form::submit('Editar', ['class'=> 'btn btn-warning'])!!}

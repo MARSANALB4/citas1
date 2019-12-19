@@ -14,8 +14,8 @@ class AddEspecialidadToEnfermedad extends Migration
     public function up()
     {
         Schema::table('enfermedads', function (Blueprint $table) {
-            $table->unsignedInteger('especialidad_id');
-            $table->foreign('especialidad_id')->references('id')->on('especialidads');
+            $table->unsignedInteger('especialidad_id')->nullable();
+            $table->foreign('especialidad_id')->references('id')->on('especialidads')->onDelete('cascade');
         });
 
     }
